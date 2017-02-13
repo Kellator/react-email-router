@@ -1,16 +1,17 @@
 //contains individual email information
 import React from 'react';
+import {Link} from 'react-router';
 
 export default function Email(props) {
 	console.log(props);
 	return (
 		<div>
 			<strong>
-				<h1>{props.title}</h1>
+				subject:  {props.title}
 			</strong>
 			&nbsp;
-			<h3>from:  {props.from}</h3>
-			<h3>to:  {props.to}</h3>
+			<p>from:  {props.from}</p>
+			<p>to:  {props.to}</p>
 			<p>{props.content}</p>
 		</div>
 	);

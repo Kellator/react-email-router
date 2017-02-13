@@ -2,13 +2,18 @@ require('babel-polyfill');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, hashHistory} from 'react-router';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
 import EmailListContainer from './components/email-list-container';
+import App from './components/app';
+import EmailContainer from './components/email-container';
 
 const routes = (
 	<Router history={hashHistory}>
-		<Route path="/emails" component={EmailListContainer} />
+		<Route path="/emails" component={App}>
+			<IndexRoute component={EmailListContainer} />
+			<Route path=":emailId" component={EmailContainer} />
+		</Route>
 	</Router>
 );
 
