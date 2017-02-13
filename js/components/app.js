@@ -1,12 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export default function App(props) {
-	console.log(props.children);
 	return (
 		<div> 
 			<h1>
 				Mailboxes
 			</h1>
+			<ul>
+				<li><Link to={'/inbox'}>Inbox</Link></li>
+				<li><Link to={'/spam'}>Spam</Link></li>
+			</ul>
 			<div>
 				{props.children}
 			</div>

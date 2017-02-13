@@ -7,7 +7,9 @@ export default function Email(props) {
 	return (
 		<div>
 			<strong>
-				subject:  {props.title}
+				<Link to={'/' + props.emailListId + '/' + props.id}>
+					subject:  {props.title}
+				</Link>
 			</strong>
 			&nbsp;
 			<p>from:  {props.from}</p>
